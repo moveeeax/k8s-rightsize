@@ -1,0 +1,38 @@
+[
+  {
+    "namespace": "prod",
+    "container": "web",
+    "cpuCores": [0.11, 0.09, 0.12, 0.10, 0.13, 0.10, 0.11, 0.10],
+    "memBytes": [104857600, 109051904, 104857600, 100663296, 104857600, 104857600],
+    "curCpuReq": 1.0,
+    "curMemReq": 536870912,
+    "curCpuLim": 2.0,
+    "curMemLim": 1073741824
+  },
+  {
+    "namespace": "prod",
+    "container": "worker",
+    "cpuCores": [0.42, 0.48, 0.51, 0.55, 0.50, 0.49, 0.60, 0.52],
+    "memBytes": [268435456, 274726912, 281018368, 287309824, 293601280, 300000000],
+    "curCpuReq": 0.1,
+    "curMemReq": 268435456,
+    "curCpuLim": 0.2,
+    "curMemLim": 314572800
+  },
+  {
+    "namespace": "staging",
+    "container": "cache",
+    "cpuCores": [0.02, 0.03, 0.02, 0.02, 0.04, 0.02],
+    "memBytes": [536870912, 545259520, 536870912, 528482304, 536870912],
+    "curCpuReq": 0.5,
+    "curMemReq": 1073741824,
+    "curCpuLim": 1.0,
+    "curMemLim": 2147483648
+  },
+  {
+    "namespace": "dev",
+    "container": "sandbox",
+    "cpuCores": [0.15, 0.20, 0.18],
+    "memBytes": [67108864, 71303168, 67108864]
+  }
+]

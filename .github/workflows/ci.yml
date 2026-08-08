@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: k8s-rightsize
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Go
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends golang-go ca-certificates
+          go version
+
+      - name: Vet
+        run: go vet ./...
+
+      - name: Test
+        run: go test -race ./...
+
+      - name: Build
+        run: |
+          go build -o k8s-rightsize .
+          ./k8s-rightsize --version
+
+      - name: Smoke run against the example fixture
+        run: ./k8s-rightsize --source file --file examples/usage.json

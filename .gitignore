@@ -1,0 +1,17 @@
+# Built binary — anchor to repo root so it never matches a cmd/ source dir.
+/k8s-rightsize
+/dist/
+
+# Go
+*.test
+*.out
+coverage.txt
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# keep fixtures tracked
+!examples/**
+!testdata/**
