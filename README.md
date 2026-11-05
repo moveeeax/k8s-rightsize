@@ -104,3 +104,7 @@ example fixture doubles as a deterministic test corpus.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+**Archived on 2026-11-05.** merge into k8s-resource-recommender: same job (Prometheus usage to requests/limits), but this repo keys usage by (namespace, container) so same-named containers in different workloads collapse into one row, it has no workload mapping or patch output, and it pulls raw samples for the whole window to the client; port its comparison and cost pieces, then archive. The scope moves to [k8s-resource-recommender](https://github.com/moveeeax/k8s-resource-recommender/issues/2).
