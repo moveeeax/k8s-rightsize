@@ -1,7 +1,7 @@
 # k8s-rightsize
 
 [![ci](https://github.com/moveeeax/k8s-rightsize/actions/workflows/ci.yml/badge.svg)](https://github.com/moveeeax/k8s-rightsize/actions/workflows/ci.yml)
-[![Go](https://img.shields.io/badge/go-1.22-00ADD8?logo=go)](https://go.dev)
+[![Go](https://img.shields.io/badge/go-1.26%2B-00ADD8?logo=go)](https://go.dev)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Stop guessing CPU/memory requests and limits — base them on what your pods
@@ -21,6 +21,8 @@ it never touches a workload.
 - Prints a table or machine-readable JSON.
 
 ## Install
+
+Requires Go 1.26 or newer.
 
 ```sh
 go install github.com/moveeeax/k8s-rightsize@latest
